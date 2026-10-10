@@ -1,0 +1,7 @@
+langchain>=1.0.0
+langchain-openai>=1.0.0
+langgraph>=1.0.0
+streamlit>=1.40.0
+pydantic>=2.7.0
+python-dotenv>=1.0.0
+pypdf>=5.0.0

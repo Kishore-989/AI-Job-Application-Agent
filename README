@@ -1,0 +1,46 @@
+# AI Job Application Agent
+
+A beginner-friendly starter project using Python, LangChain, LangGraph, and Streamlit.
+
+## Features
+- Accepts a resume as text and a pasted job description
+- Extracts job requirements and resume evidence into structured data
+- Creates an evidence-based match report
+- Drafts a tailored summary, resume bullet suggestions, and cover letter
+- Runs a final factuality review
+- Keeps the workflow human-reviewed: it does not submit applications automatically
+
+## Setup (Windows PowerShell or CMD)
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+copy .env.example .env
+```
+
+Edit `.env` and add your API key. Never commit `.env` or share your key.
+
+## Run
+
+```bash
+streamlit run app.py
+```
+
+## Suggested test
+Resume:
+`B.Tech CSE graduate. Skills: Python, SQL, Django, React, Git. Project: PDF question-answering chatbot using LangChain and vector search.`
+
+Job description:
+`Entry-level Python Developer. Required: Python, SQL, REST APIs, Git, testing, communication. Responsibilities include maintaining APIs, debugging issues, writing tests, and collaborating with engineers.`
+
+## Project structure
+- `app.py`: Streamlit interface
+- `agent.py`: LangGraph workflow
+- `.env`: local secrets (create from `.env.example`)
+
+## Important limitations
+- The match score is a heuristic based on extracted skills, not a hiring probability.
+- Verify all generated content before using it.
+- Do not add skills, work history, certifications, or achievements you cannot substantiate.
+- This starter version takes resume text directly. PDF upload and RAG can be added as the next module.
